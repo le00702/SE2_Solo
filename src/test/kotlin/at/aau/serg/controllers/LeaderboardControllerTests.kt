@@ -53,5 +53,4 @@ class LeaderboardControllerTests {
         assertEquals(third, res[1])
         assertEquals(first, res[2])
     }
-
 }

@@ -14,7 +14,7 @@ class LeaderboardController(
 
     @GetMapping
     fun getLeaderboard(): List<GameResult> =
-        gameResultService.getGameResults().sortedWith(compareBy({ -it.score }, { it.timeInSeconds }))
+        gameResultService.getGameResults().sortedWith(compareBy({ -it.score }, { it.timeInSeconds }, { it.id }))
         //instead of the tiebreaker being the smallest id, the completion time is used
         //gameResultService.getGameResults().sortedWith(compareBy({ -it.score }, { it.id })) #Old implementation
 
